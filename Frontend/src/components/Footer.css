@@ -1,0 +1,85 @@
+/* Footer Base */
+.footer-middle {
+    padding: 24px 0;
+    background-color: #1d1d1d;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 40px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .footer-about, .footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  .footer-about h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4,
+  .footer-social h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-contact p {
+    margin: 8px 0;
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social .social-icons a {
+    display: inline-block;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-social .social-icons a:hover {
+    color: #4f46e5; /* Indigo hover effect */
+  }
+  
+  .footer-bottom {
+    background-color: #33363b;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #90969a;
+  }
+  

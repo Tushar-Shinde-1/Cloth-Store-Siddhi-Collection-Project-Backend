@@ -1,0 +1,34 @@
+
+.hovereffect p:hover{
+    color: #8B0000;
+}
+a.active p{
+    color:#8B0000
+}
+@media (max-width:640px)
+{
+    a.active{
+        background-color: black;
+        color: white;
+    }
+}
+
+.storename {
+    font-size: 35px; /* default for large screens */
+    font-family: 'Brush Script MT', cursive;
+    color: #8B0000;
+}
+
+/* Medium screens (tablets, 641px - 1024px) */
+@media (max-width: 1024px) {
+    .storename {
+        font-size: 28px; /* smaller font for medium screens */
+    }
+}
+
+/* Small screens (mobiles, up to 640px) */
+@media (max-width: 640px) {
+    .storename {
+        font-size: 25px; /* smallest font for small screens */
+    }
+}
