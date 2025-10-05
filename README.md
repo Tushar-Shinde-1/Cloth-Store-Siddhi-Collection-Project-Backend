@@ -10,7 +10,7 @@ This allows us to **enhance frontend and backend in parallel** without conflicts
 ---
 
 
-## ⚡ Getting Started Read the word file attached with the project folder
+## ⚡ Getting Started - Read the word file attached with the project folder
 
 ### 1️⃣ Accept Invitation
 - Check your email or GitHub notifications and accept the collaborator invitation.  
