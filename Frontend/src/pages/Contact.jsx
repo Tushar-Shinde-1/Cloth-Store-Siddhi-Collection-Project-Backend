@@ -8,7 +8,7 @@ const Contact = () => {
     <div className="w-[90%] sm:max-w-6xl m-auto mt-14 text-gray-800">
       {/* Header */}
       <div className="flex justify-center items-center mb-10">
-        <TItle text1={'GET'} text2={'CONNECTED'} />
+        <TItle text1={"GET"} text2={"CONNECTED"} />
       </div>
 
       {/* Image + Contact Info Horizontal */}
@@ -20,20 +20,27 @@ const Contact = () => {
 
         {/* Contact Info */}
         <div className="md:w-1/2 flex flex-col gap-6">
-                <div className="storename p-2 ">Siddhi Collection</div>
-        
-        <div className="flex items-center gap-3">
-         
-            <p>123, Sanjivani College, Kopargaon, Maharashtragkgb4bgegbekuebgveuiebgveugiegeriugeguierhgeiughe getbgeughe ibgeg egiug gbujg egh gerguoger geruggunr</p>
+          <div className="storename p-2">Siddhi Collection</div>
+
+          <div className="flex items-center gap-3">
+               <p className="break-all">
+                  123, Sanjivani College, Kopargaon, Maharashtragkgb4bgegbekuebgveuiebgveugiegeriugeguierhgeiughe getbgeughe ibgeg egiug gbujg egh gerguoger geruggunr
+               </p>
           </div>
+
+
           <div className="flex items-center gap-3">
             <MapPin className="text-red-500" />
-            <p>123, Sanjivani College, Kopargaon, Maharashtra</p>
+            <p className="break-words">
+              123, Sanjivani College, Kopargaon, Maharashtra
+            </p>
           </div>
+
           <div className="flex items-center gap-3">
             <Phone className="text-green-600" />
             <p>+91 98765 43210</p>
           </div>
+
           <div className="flex items-center gap-3">
             <Mail className="text-blue-600" />
             <a href="mailto:someone@example.com" className="hover:underline">
@@ -44,7 +51,7 @@ const Contact = () => {
       </div>
 
       {/* Email Form */}
-      <div className="bg-gray-100 w-[60%] m-auto p-12 mb-8">
+      <div className="bg-gray-100 w-full sm:w-3/4 md:w-3/5 m-auto p-12 mb-8">
         <h3 className="text-xl font-medium mb-4 text-center">Send us a Message</h3>
         <form className="flex flex-col gap-4">
           <input
@@ -65,7 +72,7 @@ const Contact = () => {
             className="w-full px-3 py-2 border border-gray-300 resize-none"
             required
           />
-          <button className="bg-black w-1/4 mx-auto text-white px-6 py-2 hover:bg-gray-900  transition">
+          <button className="bg-black w-full sm:w-1/2 md:w-1/4 mx-auto text-white px-6 py-2 hover:bg-gray-900 transition">
             Send
           </button>
         </form>
@@ -73,13 +80,28 @@ const Contact = () => {
 
       {/* Social Links */}
       <div className="flex justify-center gap-6 text-lg">
-        <a href="https://youtube.com" target="_blank" rel="noreferrer" className="text-red-600 hover:scale-110 transition">
+        <a
+          href="https://youtube.com"
+          target="_blank"
+          rel="noreferrer"
+          className="text-red-600 hover:scale-110 transition"
+        >
           <Youtube size={30} />
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-pink-500 hover:scale-110 transition">
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noreferrer"
+          className="text-pink-500 hover:scale-110 transition"
+        >
           <Instagram size={30} />
         </a>
-        <a href="https://chat.whatsapp.com/" target="_blank" rel="noreferrer" className="text-green-600 hover:scale-110 transition">
+        <a
+          href="https://chat.whatsapp.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-green-600 hover:scale-110 transition"
+        >
           <MessageCircle size={30} />
         </a>
       </div>
