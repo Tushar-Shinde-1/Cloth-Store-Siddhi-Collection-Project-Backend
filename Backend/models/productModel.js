@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-
-
 //creation of schema
 
 const productSchema= new mongoose.Schema({
@@ -14,6 +12,7 @@ const productSchema= new mongoose.Schema({
     sizes:{type:Array,required:true},
     bestseller:{type:Boolean},
     date:{type:Number,required:true},
+    
 })
 
 //every time your backend restarts, Mongoose will try to redefine the same model, leading to an error

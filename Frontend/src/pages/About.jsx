@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { assets } from "../assets/assets";
 
 const AboutUs = () => {
   return (
@@ -8,7 +9,7 @@ const AboutUs = () => {
       <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
         {/* Owner Image */}
         <img
-          src="https://via.placeholder.com/250" // Replace with owner image
+          src={assets.amruta} // Replace with owner image
           alt="Owner"
           className="w-60 h-60 object-cover rounded-2xl shadow-lg"
         />
@@ -29,21 +30,21 @@ const AboutUs = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
         <div className="rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
           <img
-            src="https://via.placeholder.com/400x250"
+            src={assets.sari7}
             alt="Gallery 1"
             className="w-full h-56 object-cover"
           />
         </div>
         <div className="rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
           <img
-            src="https://via.placeholder.com/400x250"
+            src={assets.diya3}
             alt="Gallery 2"
             className="w-full h-56 object-cover"
           />
         </div>
         <div className="rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
           <img
-            src="https://via.placeholder.com/400x250"
+            src={assets.sari6}
             alt="Gallery 3"
             className="w-full h-56 object-cover"
           />

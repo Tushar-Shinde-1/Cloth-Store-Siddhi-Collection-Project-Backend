@@ -20,8 +20,14 @@ import nonrating from './nonrating.png'
 import back1 from './back1.png'
 import cancel from './cancel.png'
 import filter from './filter.png'
+import bin_icon from './bin_icon.png'
+import exchange_icon from './exchange.png'
+import support_img from './support.png'
+import quality from './quality_icon.png'
+import amruta from './amruta.jpg'
 export const assets={
     sari1,
+    amruta,
     sari2,
     sari3,
     sari4,
@@ -42,7 +48,12 @@ export const assets={
     nonrating,
     back1,
     cancel,
-    filter
+    filter,
+    bin_icon,
+    exchange_icon,
+    support_img,
+   quality
+
 }
 
 export const products=[

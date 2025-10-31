@@ -10,7 +10,7 @@ const LatestCollection = () => {
     const [latestProduct,setLatestProduct]=useState([]);
     useEffect(()=>{
 setLatestProduct(products.slice(0,5));
-    },[])
+    },[products])
     
     //console.log(latestProduct)
   return (

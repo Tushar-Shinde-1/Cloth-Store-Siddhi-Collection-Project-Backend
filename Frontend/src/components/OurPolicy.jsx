@@ -7,17 +7,17 @@ const OurPolicy = () => {
 
 
         <div>
-            <img src={assets.addcart} alt="" className='w-12 m-auto mb-5' />
+            <img src={assets.exchange_icon} alt="" className='w-12 m-auto mb-5' />
             <p className='font-semibold'>Easy Exchange Policy</p>
             <p className='text-gray-400'>We offer hassle free exchange policy</p>
         </div>
         <div>
-            <img src={assets.addcart} alt="" className='w-12 m-auto mb-5' />
+            <img src={assets.support_img} alt="" className='w-12 m-auto mb-5' />
             <p className='font-semibold'>24/7 customer support</p>
             <p className='text-gray-400'>We offer hassle free exchange policy</p>
         </div>
         <div>
-            <img src={assets.addcart} alt="" className='w-12 m-auto mb-5' />
+            <img src={assets.quality} alt="" className='w-12 m-auto mb-5' />
             <p className='font-semibold'>7-days return policy</p>
             <p className='text-gray-400'>We offer hassle free exchange policy</p>
         </div>
