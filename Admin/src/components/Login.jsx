@@ -1,32 +1,34 @@
 import React, { useState } from 'react'
 import { backendUrl } from '../App'
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Login = ({setToken}) => {
 
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
 
-  const onSubmitHandler =async (e)=>
-  {
-    try {
+  const onSubmitHandler = async (e) => {
+    e.preventDefault(); // prevent reload
   
-      //prevention of reload
-      e.preventDefault();
-
-      const response = await axios.post(backendUrl+'/api/user/admin',{email,password});
-      if(response.data.success)
-      {
-setToken(response.data.token)
-      }
-      else{
-        toast.error(response.data.message)
+    try {
+      const response = await axios.post(backendUrl + '/api/user/admin', { email, password });
+  
+      if (response.data.success) {
+        setToken(response.data.token);
+      } else {
+        toast.error(response.data.message || "Invalid credentials");
       }
     } catch (error) {
-      console.log(error);
-      toast.error(response.data.message)
+      // this handles wrong credentials or server errors
+      const message =
+        error.response && error.response.data && error.response.data.message
+          ? error.response.data.message
+          : "Invalid credentials";
+      toast.error(message);
     }
-  }
+  };
+  
     
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-gray-200">

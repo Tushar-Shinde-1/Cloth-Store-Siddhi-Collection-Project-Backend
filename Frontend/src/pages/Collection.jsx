@@ -46,7 +46,7 @@ const Collection = () => {
 
     //subcategory filter
     if(subcategory.length>0){
-      productscopy=productscopy.filter(item=>subcategory.includes(item.subCategory));
+      productscopy=productscopy.filter(item=>subcategory.includes(item.subcategory));
     }
 
     console.log("updated prodects",productscopy);
@@ -80,10 +80,24 @@ const Collection = () => {
     <div className='flex flex-col sm:flex-row gap-5 md:gap-10 pt-3 md:pt-10 px-1 md:px-12 border-t'>
       {/* //filteroptions */}
       <div className='min-w-60'> 
-        <p onClick={() => setShowFilter(!showFilter)}  className='my-0 md:text-xl flex items-center cursor-pointer pl-6 gap-2  md:my-2 md:pl-1 '>FILTERS
-          {/* //add dropdoen icon here */}
-          <img src={assets.filter} alt="" className={` h-4 pt-1 sm:hidden ${showFilter?'rotate-180':''}`}/>
-        </p>
+        <div
+  onClick={() => setShowFilter(!showFilter)}
+  className="
+    flex items-center gap-2 cursor-pointer
+    mx-3 sm:mx-0
+    border border-gray-300 sm:border-none
+    px-1 py-2 sm:px-0 sm:py-0
+    text-sm
+  "
+>
+  <p className='px-1'>FILTERS</p>
+  <img
+    src={assets.filter}
+    alt=""
+    className={`h-4 pt-1 sm:hidden ${showFilter ? "rotate-180" : ""}`}
+  />
+</div>
+
 
         {/* category filter  here we are creating the dynamic styling which will update with stae variable so we have used the backtik in the below class name */}
         <div className={`border border-gray-300 pl-5 py-3 mt-6  mx-3  md:mx-0  ${showFilter ? '':'hidden'} sm:block`} >
@@ -106,7 +120,7 @@ const Collection = () => {
               <input className='w-3 'type='checkbox' value={'Daily'} onChange={togglesubCategory}/>Daily
             </p>
             <p className='flex gap-2'>
-              <input className='w-3 'type='checkbox' value={'Occassional'} onChange={togglesubCategory}/>Occasional
+              <input className='w-3 'type='checkbox' value={'Occasional'} onChange={togglesubCategory}/>Occasional
             </p>
             <p className='flex gap-2'>
               <input className='w-3 'type='checkbox' value={'Wedding'} onChange={togglesubCategory}/>Wedding
@@ -117,18 +131,19 @@ const Collection = () => {
 
       {/* rightportion */}
       <div className='flex-1  px-1 md:px-6 sm:px-12 md:py-4'>
-        <div className='flex justify-between text-base sm:text-2xl mb-4'>
-          <TItle  text1={"ALL"} text2={"COLLECTION"}/>
+      <div className='flex flex-col  sm:flex-row sm:justify-between text-base sm:text-2xl mb-4 gap-2 mx-2'>
+
+          <TItle   text1={"ALL"} text2={"COLLECTION"}/>
           {/* SORT PRODUCT */}
-          <select  onChange={(e)=>setSortType(e.target.value)} className='border border-gray-300 text-sm px-0 pl-2'>
-            <option value="relavent">Sort by:Relavent</option>
-            <option value="low-high">Sort by:Low to High</option>
-            <option value="high-low">Sort by:High to Low</option>
+          <select  onChange={(e)=>setSortType(e.target.value)} className='border border-gray-300 text-sm px-0 py-2 px-1 '>
+            <option value="relavent">Sort by : Relavent</option>
+            <option value="low-high">Sort by : Low to High</option>
+            <option value="high-low">Sort by : High to Low</option>
           </select>
         </div>
 
         {/* map product */}
-        <div className='flex flex-wrap justify-center gap-x-8 gap-y-4 mt-4'>
+        <div className='flex flex-wrap justify-center gap-x-6 gap-y-4 mt-4'>
           {
             filterProducts.map((item, index) =>
               <ProductItem 

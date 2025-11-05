@@ -19,19 +19,34 @@ const RelatedProduct = ({category,subCategory}) => {
         }
     },[products]);
     console.log("relateed",related)
+
+    
   return (
     <div>
       <div className='my-6'>
         <div className='text-center text-3xl py-2'>
             <TItle text1={'RELATED'} text2={'PRODUCTS'}/>
         </div>
-        <div className='flex flex-wrap justify-center gap-x-8 gap-y-4 mt-4'>
-  {
-    related.map((item, index) =>
-      <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
-    )
-  }
+        <div className='flex flex-wrap justify-center gap-x-2 gap-y-4 mt-4'>
+  {related.map((item, index) => (
+    <div
+      key={index}
+      onClick={() => {
+        // Update current product in context or parent
+        // Example: setCurrentProduct(item) if you have context
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
+    >
+      <ProductItem
+        id={item._id}
+        image={item.image}
+        name={item.name}
+        price={item.price}
+      />
+    </div>
+  ))}
 </div>
+
       </div>
     </div>
   )

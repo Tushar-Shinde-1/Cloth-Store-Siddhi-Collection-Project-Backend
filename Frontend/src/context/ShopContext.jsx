@@ -145,7 +145,7 @@ const getUserCart =async(token)=>{
         }
     },[])
     const value = {
-        backendUrl, setToken,token, products, currency, delivery_fee, search, setSearch, showSearch, setShowSearch, cartItem,setCartItem, addToCart, getCartCount, updateQuantity, getCartAmount, navigate,setCartItem
+        backendUrl, setToken,token, products, currency, delivery_fee, search, setSearch, showSearch, setShowSearch, cartItem,setCartItem, addToCart, getCartCount, updateQuantity, getCartAmount, navigate,
     }
     return (
         <ShopContext.Provider value={value}>

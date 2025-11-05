@@ -21,16 +21,18 @@ const App = () => {
         <>
           <Navbar setToken={setToken } />
           <hr className='border-t border-gray-300' />
-          <div className='flex w-full'>
-            <Siderbar />
-            <div className='w-70% mx-auto ml-[max(5vw,25px))] my-8 text-gray-600 text-base'>
-              <Routes>
-                <Route path='/add' element={<Add  token={token}/>} />
-                <Route path='/list' element={<List token={token} />} />
-                <Route path='/orders' element={<Orders  token={token}/>} />
-              </Routes>
-            </div>
-          </div>
+          <div className="flex flex-col md:flex-row w-full">
+  <Siderbar />
+  
+  <div className="w-full md:w-[70%] mx-auto md:ml-[max(5vw,25px)] my-8 text-gray-600 text-base">
+    <Routes>
+      <Route path="/add" element={<Add token={token} />} />
+      <Route path="/list" element={<List token={token} />} />
+      <Route path="/orders" element={<Orders token={token} />} />
+    </Routes>
+  </div>
+</div>
+
         </>
       }
     </div>
