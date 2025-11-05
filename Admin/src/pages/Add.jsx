@@ -230,7 +230,7 @@ const Add = ({ token }) => {
                   : "border-gray-300 focus:ring-indigo-400"
               }`}
             >
-              <option value="Men">Men</option>
+         
               <option value="Women">Women</option>
               <option value="Kids">Kids</option>
             </select>
