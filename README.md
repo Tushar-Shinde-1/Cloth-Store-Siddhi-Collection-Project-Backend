@@ -73,42 +73,7 @@ A full-stack **MERN (MongoDB, Express.js, React, Node.js)** based e-commerce pla
 - Manage orders  
 - View user details  
 
-## 📂 Folder Structure
-```
-root
-│── client/
-│   └── src/
-│       ├── components/
-│       ├── contexts/
-│       ├── pages/
-│       └── utils/
-│
-│── server/
-    ├── controllers/
-    ├── models/
-    ├── routes/
-    ├── middleware/
-    └── config/
-```
 
-## 🔌 API Endpoints
-
-### Auth
-POST /api/register  
-POST /api/login  
-POST /api/admin/login  
-
-### Products
-GET /api/products  
-GET /api/products/:id  
-POST /api/products (Admin)  
-DELETE /api/products/:id (Admin)
-
-### Orders
-POST /api/orders  
-GET /api/orders/myorders  
-GET /api/orders (Admin)  
-PUT /api/orders/:id  
 
 ## 🚀 Future Enhancements
 - AI recommendations  
